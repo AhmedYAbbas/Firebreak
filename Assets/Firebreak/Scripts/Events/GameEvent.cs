@@ -15,10 +15,7 @@ namespace Firebreak
                 _listeners.Add(listener);
         }
 
-        public void Unregister(Action listener)
-        {
-            _listeners.Remove(listener);
-        }
+        public void Unregister(Action listener) => _listeners.Remove(listener);
 
         public void Raise()
         {
