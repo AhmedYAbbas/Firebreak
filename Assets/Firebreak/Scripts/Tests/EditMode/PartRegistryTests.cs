@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Firebreak.Tests
@@ -46,7 +45,7 @@ namespace Firebreak.Tests
         }
 
         [Test]
-        public void FinNearestUnclaimed_IgnoresClaimed()
+        public void FindNearestUnclaimed_IgnoresClaimed()
         {
             var near = MakePart(new Vector3(1f, 0f, 0f));
             near.Claimed = true;
@@ -60,7 +59,7 @@ namespace Firebreak.Tests
         }
 
         [Test]
-        public void FindNearestUnclaimeed_ReturnsNull_WhenNoneInRadius()
+        public void FindNearestUnclaimed_ReturnsNull_WhenNoneInRadius()
         {
             _registry.Add(MakePart(new Vector3(50f, 0f, 0f)));
 

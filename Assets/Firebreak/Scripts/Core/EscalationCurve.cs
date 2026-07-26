@@ -15,7 +15,7 @@ namespace Firebreak
         public float Evaluate(float elapsedSeconds)
         {
             float t = _runLength <= 0f ? 1f : Mathf.Clamp01(elapsedSeconds / _runLength);
-            return _intensityOverNormalizedTime.Evaluate(t);
+            return Mathf.Clamp01(_intensityOverNormalizedTime.Evaluate(t));
         }
 
         public void SetForTests(AnimationCurve curve, float runLength)

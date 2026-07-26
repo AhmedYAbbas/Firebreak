@@ -18,7 +18,7 @@ namespace Firebreak
         public RunPhase Phase { get; private set; } = RunPhase.Playing;
 
         private float _elapsed;
-        private int _sprinklersActivate;
+        private int _sprinklersActive;
 
         public float Intensity => _escalation != null ? _escalation.Evaluate(_elapsed) : 0f;
 
@@ -33,8 +33,8 @@ namespace Firebreak
             if (Phase != RunPhase.Playing)
                 return;
 
-            _sprinklersActivate++;
-            if (_sprinklersActivate >= _requiredSprinklers)
+            _sprinklersActive++;
+            if (_sprinklersActive >= _requiredSprinklers)
                 Win();
         }
 

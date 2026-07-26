@@ -27,7 +27,7 @@ namespace Firebreak
                     continue;
 
                 float distanceSqr = (part.Position - from).sqrMagnitude;
-                if (distanceSqr < nearestDistanceSqr)
+                if (distanceSqr <= nearestDistanceSqr)
                 {
                     nearestDistanceSqr = distanceSqr;
                     nearest = part;

@@ -36,7 +36,7 @@ namespace Firebreak.Tests
         }
 
         [Test]
-        public void Register_IsDempotent()
+        public void Register_IsIdempotent()
         {
             var evt = ScriptableObject.CreateInstance<GameEvent>();
             int count = 0;

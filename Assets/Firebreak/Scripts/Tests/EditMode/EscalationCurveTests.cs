@@ -13,7 +13,7 @@ namespace Firebreak.Tests
         }
 
         [Test]
-        public void Evaluate_AtStart_IsZer()
+        public void Evaluate_AtStart_IsZero()
         {
             var c = LinearCurve(300f);
             Assert.AreEqual(0f, c.Evaluate(0f), 0.001f);
@@ -34,7 +34,7 @@ namespace Firebreak.Tests
         }
 
         [Test]
-        public void Evaluate_InMonotonicNonDecreasing_ForRisingCurve()
+        public void Evaluate_IsMonotonicNonDecreasing_ForRisingCurve()
         {
             var c = LinearCurve(300f);
             float prev = -1f;
